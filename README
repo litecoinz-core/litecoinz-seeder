@@ -66,5 +66,5 @@ versions greater than 2.6.24.
 
 $ setcap 'cap_net_bind_service=+ep' /path/to/litecoinz-seeder
 
-`setcap` usually comes pre-installed on most modern distributions, but is 
+`setcap` usually comes pre-installed on most modern distributions, but is
 available in the `libcap2-bin` package on debian and libcap2 on RedHat.
