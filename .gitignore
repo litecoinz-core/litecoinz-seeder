@@ -1,3 +1,4 @@
 *.o
 dnsseed*
+litecoinz-seeder*
 dnsstats.log

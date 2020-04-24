@@ -31,9 +31,9 @@ $ dig -t NS dnsseed.example.com
 ;; ANSWER SECTION
 dnsseed.example.com.   86400    IN      NS     vps.example.com.
 
-On the system vps.example.com, you can now run dnsseed:
+On the system vps.example.com, you can now run litecoinz-seeder:
 
-./dnsseed -h dnsseed.example.com -n vps.example.com
+./litecoinz-seeder -h dnsseed.example.com -n vps.example.com
 
 If you want the DNS server to report SOA records, please provide an
 e-mail address (with the @ part replaced by .) using -m.
@@ -45,7 +45,7 @@ by `libboost-dev` and `libssl-dev` respectively.
 
 $ make
 
-This will produce the `dnsseed` binary.
+This will produce the `litecoinz-seeder` binary.
 
 
 RUNNING AS NON-ROOT
@@ -58,5 +58,5 @@ a non-privileged port:
 
 $ iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-port 5353
 
-If properly configured, this will allow you to run dnsseed in userspace, using
+If properly configured, this will allow you to run litecoinz-seeder in userspace, using
 the -p 5353 option.
