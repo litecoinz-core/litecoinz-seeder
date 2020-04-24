@@ -47,6 +47,9 @@ $ make
 
 This will produce the `litecoinz-seeder` binary.
 
+Note: on Raspberry Pi 4 compile using:
+
+$ make LDFLAGS="-latomic"
 
 RUNNING AS NON-ROOT
 -------------------
