@@ -1,4 +1,4 @@
-litecoinz-seeder
+LITECOINZ-SEEDER
 ================
 
 Litecoinz-seeder is a crawler for the LitecoinZ network, which exposes a list
