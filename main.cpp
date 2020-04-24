@@ -420,13 +420,11 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"dnsseed.litecoinz.org", "dnsseed.litecoinz.info", ""};
-static const string testnet_seeds[] = {"dnsseed-testnet.litecoinz.org", "dnsseed-testnet.litecoinz.info", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 29333), true);
+    db.Add(CService("kjy2eqzk4zwi5zd3.onion", mainnet_port), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
@@ -478,10 +476,7 @@ int main(int argc, char **argv) {
   bool fDNS = true;
   if (opts.fUseTestNet) {
       printf("Using testnet.\n");
-      pchMessageStart[0] = 0xfe;
-      pchMessageStart[1] = 0x90;
-      pchMessageStart[2] = 0x86;
-      pchMessageStart[3] = 0x5d;
+      std::copy(std::begin(pchMessageStart_testnet), std::end(pchMessageStart_testnet), std::begin(pchMessageStart));
       seeds = testnet_seeds;
       fTestNet = true;
   }
