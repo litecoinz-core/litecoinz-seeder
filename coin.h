@@ -7,8 +7,8 @@
 
 #include <string>
 
-static const std::string mainnet_seeds[] = {"dnsseed.litecoinz.org", "dnsseed.litecoinz.info", ""};
-static const std::string testnet_seeds[] = {"dnsseed-testnet.litecoinz.org", "dnsseed-testnet.litecoinz.info", ""};
+static const std::string mainnet_seeds[] = {"dnsseed.litecoinz.org", ""};
+static const std::string testnet_seeds[] = {"dnsseed-testnet.litecoinz.org", ""};
 
 static const int mainnet_port = 29333;
 static const int testnet_port = 39333;
